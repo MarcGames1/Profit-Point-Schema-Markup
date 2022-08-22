@@ -1,0 +1,142 @@
+// 1. Pentru un singur curs tipul de curs iar la descriere putem adauga promisiunea specifica cursului
+
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Curs Trading Crypto",
+  "description": "Un Curs de Trading Crypto îți va arăta, în patru zile, fiecare pas pe care îl poți implementa tu, ca alternativă de creare a unor surse suplimentare de venit: de la crearea unui cont de tranzacționare, la retragerea profitului.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Profit Point",
+    "sameAs": "https://profitpoint.ro/"
+  }
+}
+
+
+// 2. Pentru Pagina unde se vor lista Toate cursurile https://profitpoint.ro/cursuri-profit-point se vor pune toate cursurile afisate pe pagina dupa modelul de mai jos. In dreptul description
+// vom pune promisiunea specifca cursului 
+
+
+{
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Course",
+            "url":"https://profitpoint.ro/curs-primii-pasi-pe-bursa",
+            "name": "Curs Investiții la Bursă - Primii pasi la bursa",
+            "description": "Un curs de investiții la bursă îți poate răspunde la mai multe probleme legate de perspectiva ta asupra finanțelor, pentru că prin acest program educațional de 4 zile vei reuși să ai o viziune clară asupra banilor tăi.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Profit Point",
+            "sameAs": "https://profitpoint.ro/"
+           }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Course",
+            "url":"https://profitpoint.ro/curs-crypto",
+            "name": "Curs online gratuit de Trading Crypto",
+            "description": "Un Curs de Trading Crypto îți va arăta, în patru zile, fiecare pas pe care îl poți implementa tu, ca alternativă de creare a unor surse suplimentare de venit: de la crearea unui cont de tranzacționare, la retragerea profitului.",
+            "provider": {
+              "@type": "Organization",
+            "name": "Profit Point",
+             "sameAs": "https://profitpoint.ro/"
+           }
+         }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Course",
+            "url":"https://www.example.com/courses#advanced-cs",
+            "name": "Curs gratuit de tranzacționare FOREX",
+            "description": "În Cursul de Tranzacționare FOREX pentru începători vei învăța cum să faci primii pași către independența ta financiară, la modul practic: de la termeni generali, la lucruri perfect aplicabile, îți vom preda totul în cele 8 ore de curs LIVE.",
+            "provider": {
+              "@type": "Organization",
+               "name": "Profit Point",
+                "sameAs": "https://profitpoint.ro/"
+           }
+          }
+        }
+      ]
+    }
+// Aici se vor adauga toate cursurile  exact ca in exemplu
+
+//Exemplu BREADCRUMBS pentru cursuri
+[{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Cursuri Profit Point",
+        "item": "https://profitpoint.ro/cursuri-profit-point"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Profit Week",
+        "item": "https://profitpoint.ro/curs-profit-week3-profit-point"
+      }]
+
+      //Exemplu Breadcrumbs pentru Blog avem pozitia 1 pagina principala de blog, pozitia 2 categoria de blog, pozitia 3 articolul de blog
+
+      [{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Blog Profit Point",
+        "item": "https://profitpoint.ro/blog"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Bani Online",
+        "item": "https://profitpoint.ro/index.php?route=product/category&path=589"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cum sa faci Bani Online",
+        "item": "https://profitpoint.ro/cum-sa-faci-bani-online"
+      }]
+
+
+      // Pentru pagina de articol de blog
+
+      {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://profitpoint.ro/cum-sa-faci-bani-online"
+      },
+      "headline": "Article headline",
+      "image": [
+        "https://example.com/photos/1x1/photo.jpg", //aici ar trebui adresa url absoluta pentru 3 poze cu aspect ratio diferit 1 x 1 4 x 3 si 16 x 9
+        "https://example.com/photos/4x3/photo.jpg",
+        "https://example.com/photos/16x9/photo.jpg"
+      ],
+      "datePublished": "2015-02-05T08:00:00+08:00",
+      "dateModified": "2015-02-05T09:20:00+08:00",
+      "author": {
+        "@type": "Person",
+        "name": "John Doe",  // numele autorului
+        "url": "http://example.com/profile/johndoe123"   //adresa URL a paginii de autor
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Profit Point",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://profitpoint.ro/image/catalog/logo-text-slogan-550.png" // URL cu logo Profit Point
+        }
+      }
+    }
